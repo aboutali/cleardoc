@@ -1,11 +1,19 @@
-# Handover Documentation — PLACEHOLDER
+# Handover Documentation — Pointer
 
-The handover documentation from the previous AI collaboration was referenced at
-project kickoff but the attachment arrived empty.
+The handover documentation from the previous AI collaboration was delivered on
+2026-08-26 and is preserved verbatim in the repository root:
 
-**Action for the founder:** replace this file's contents with the actual
-handover documentation, then reconcile:
+**`ClearDoc_Handover_2026-08-26/`**
 
-1. `docs/product/assumptions.md` — confirm or correct each assumption
-2. `docs/product/vision.md`, `mvp.md`, `roadmap.md` — update where assumptions were wrong
-3. `index.html` — landing page copy must match the corrected product definition
+| File | Content |
+|------|---------|
+| `HANDOVER.md` | Strategic core, product logic, guardrails, validation plan, open decisions, sources |
+| `TECHNICAL_HANDOVER.md` | Landing-page architecture, calculator/form details, acceptance criteria |
+| `COPY_DECK.md` | Site copy |
+| `site/VALUE_PROPOSITION.md` | Positioning, pillars, product limits, validation questions |
+| `site/` | Authoritative German landing page (now promoted to repo root) |
+| `ClearDoc_Handover_2026-08-26.docx` | Original handover document |
+
+The handover folder is a **preserved record — do not edit it**. The live site
+files at the repo root and the reconciled planning docs in `docs/product/`
+are the working copies.

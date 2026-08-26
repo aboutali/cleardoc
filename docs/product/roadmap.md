@@ -1,58 +1,69 @@
 # Roadmap — Features per Sprint
 
-> Two-week sprints. Sprints 1–3 build to the MVP defined in `mvp.md`; later
-> sprints are direction, not commitment. Product code lives in a separate repo;
-> items marked **(site)** belong in this repo.
+> Two-week sprints. Sprints 1–4 build to the shadow-pilot MVP in `mvp.md`.
+> Product code lives in a separate repo; items marked **(site)** belong here.
+> Derived from handover §7 (validation plan) and §9 (open decisions).
 
-## Sprint 0 — Foundation (this sprint)
+## Sprint 0 — Launch readiness (this sprint)
 
-- [x] Launch website scaffold, deployable as static site **(site)**
-- [x] Product planning docs: vision, MVP, roadmap, assumptions **(site)**
-- [ ] Reconcile docs with handover documentation (`docs/HANDOVER.md`)
-- [ ] Decide hosting (GitHub Pages vs. Vercel/Netlify) and custom domain **(site)**
-- [ ] Wire waitlist form to a real backend (Formspree/Buttondown/Tally or own endpoint) **(site)**
-- [ ] Product repo: skeleton, CI, model-provider choice (separate repo)
+- [x] Repo initialized: handover preserved, authoritative German site at root, planning docs reconciled **(site)**
+- [ ] Create Formspree project, replace `YOUR_FORM_ID`, test end-to-end submission **(site)**
+- [ ] Decide domain, brand/legal entity; connect hosting (GitHub Pages / Vercel) **(site)**
+- [ ] Add Impressum + Datenschutzerklärung — legally required before go-live; align privacy policy with Formspree processing **(site)**
+- [ ] Tariff + legal review of site claims and sources (BAG reference value, example calculation) **(site)**
+- [ ] Product repo: create skeleton, CI, and eval harness scaffold (separate repo)
 
-## Sprint 1 — Core pipeline
+## Sprint 1 — Data foundations & architecture
 
-- Document ingestion: PDF + pasted text, robust text extraction
-- Summary generation with adjustable depth
-- Grounding architecture: every output span maps to source passages (this is
-  foundational — retrofitting grounding later is far harder)
-- Internal eval set: 20–30 real documents (leases, policies, ToS) with expected
-  outputs; regression-run on every prompt/model change
+- Prioritize integrations: which practice software, telephony, and time-tracking
+  systems the first pilots actually run (handover §9.5) — pick the top 1–2
+- Ingestion for invoice drafts + treatment documentation from those systems
+- Local-model operating architecture: candidate models, hardware envelope,
+  benchmark on realistic anonymized/synthetic cases (handover §9.7)
+- Golden eval set: representative TARDOC cases with known correct outcomes,
+  including "no time source → no suggestion" negatives; regression-run on every
+  rule/model change
 
-## Sprint 2 — Understanding UX
+## Sprint 2 — Detection engine (TARDOC basic insurance)
 
-- Interactive document view: click passage → explanation
-- Risk & attention flags (deadlines, auto-renewals, unusual clauses)
-- Ask-the-document Q&A with citations
-- Reading-level control (plain / detailed)
+- Missing-position detection with Pauschale-precedence check before per-item logic
+- Time-source reconciliation (telephony/time-tracking vs. billed positions —
+  the landing-page AA.10.0020 case is the canonical scenario)
+- Per-suggestion justification object: source, time basis, tariff position,
+  rule version, financial effect
+- Hallucination guardrail tests: engine provably silent without a time source
 
-## Sprint 3 — MVP hardening & private beta
+## Sprint 3 — Review workflow & pilot packaging
 
-- Accounts, document history, deletion that deletes
-- Feedback capture ("did this help?") + basic analytics funnel
-- Security pass: encryption at rest, secrets handling, rate limiting
-- Private beta with waitlist cohort #1; launch site updates from "waitlist" to
-  "request access" **(site)**
+- Review UI: suggestion list per invoice, accept/reject with reason capture
+- Metrics pipeline for the six pilot success criteria (`mvp.md`)
+- Local deployment package: install/update path inside practice infrastructure,
+  data confined to practice, deletion story
+- Security & privacy pass; draft pilot agreement (shadow mode, data handling)
 
-## Sprint 4 — Learn & iterate
+## Sprint 4 — Shadow pilot with Pionierpraxen
 
-- Act on beta feedback (reserve the whole sprint for this — plan nothing else big)
-- Document-type detection with tailored flag sets (lease vs. insurance vs. ToS)
-- Shareable summary (read-only link) — first organic-growth loop
+- Onboard first 2–3 pioneer practices from the waitlist (pick specialties per
+  handover §9.6)
+- Weekly metric reviews; tune rules against discard reasons
+- Site: switch "Pionierpraxen gesucht" messaging to pilot-progress proof points
+  as data allows **(site)**
 
-## Sprint 5+ — Candidate directions (pick by beta evidence)
+## Sprint 5+ — Directions gated on pilot evidence
 
-- Multi-document comparison ("what changed between these two versions?")
-- Integrations: email-in a document, Google Drive picker
-- Pricing + billing (only once retention proves willingness to return)
-- Team workspaces
-- Localization (plain-language output in the user's language)
+- Go/no-go on active mode (suggestions before invoice dispatch, still with
+  mandatory human approval) — only if hit rate and trust metrics clear the bar
+- Additional integrations by pilot demand
+- Pricing model + commercial pilot conversion
+- Supplementary insurance (Zusatzversicherung): separate contract/product/insurer
+  rule set and its own compliance review (handover §8, explicitly out of MVP)
+- Broader specialties; multi-site/group-practice support
 
 ## Standing tracks (every sprint)
 
-- **Quality:** eval-set regression must pass before any model/prompt change ships
-- **Trust:** privacy posture and non-advice boundaries reviewed with each feature
-- **Site:** keep launch-site claims in sync with actual product scope **(site)**
+- **Integrity:** zero invented services/times — eval regressions must pass
+  before any rule or model change ships
+- **Privacy:** patient data stays in the practice; every feature reviewed
+  against handover §6 guardrails
+- **Site accuracy:** launch-site claims stay in sync with validated product
+  reality; model calculations stay labeled as examples, never guarantees **(site)**

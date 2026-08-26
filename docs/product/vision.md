@@ -1,51 +1,60 @@
 # ClearDoc — Product Vision
 
-> Derived from working assumptions (see `assumptions.md`). Reconcile against
-> `docs/HANDOVER.md` once the handover documentation is added.
+> Source of truth: `ClearDoc_Handover_2026-08-26/` (HANDOVER.md,
+> VALUE_PROPOSITION.md). This file is the English working summary for planning.
 
 ## One-liner
 
-**ClearDoc turns documents you dread into answers you trust.**
+**Jede erbrachte Leistung. Korrekt verrechnet. Patientendaten bleiben in der Praxis.**
+(Every service rendered. Correctly billed. Patient data stays in the practice.)
 
-Complex documents — contracts, leases, insurance policies, medical letters,
-official forms — are written for experts and lawyers, not for the people who
-have to sign, follow, or act on them. ClearDoc reads the document with you and
-gives you a plain-language understanding of what it says, what it means for
-you, and what you should watch out for.
+ClearDoc is a locally-run, Swiss-tariff-specialized AI verification layer for
+outpatient billing. Before an invoice leaves the practice, ClearDoc checks the
+draft against treatment documentation and reliable time sources, and flags
+documented services that may be missing — traceably, with tariff position,
+rule, and financial effect.
 
 ## Problem
 
-- People sign or act on documents they don't fully understand, because the
-  alternative (paying an expert, or hours of research) is disproportionate.
-- Summaries alone aren't enough: users need *grounded* clarity — every
-  explanation traceable to the exact passage it explains, so trust doesn't
-  depend on blind faith in an AI.
-- Existing general-purpose chatbots can summarize, but they lose the document
-  context, hallucinate obligations, and offer no structured workflow
-  (highlighting, risk flags, comparisons, history).
+- With TARDOC, Swiss outpatient billing became more granular and rule-heavy;
+  documented services are easy to under-bill under time pressure.
+- Manual invoice review is slow, inconsistent, and competes with patient care.
+- Cloud AI tools are a hard sell in medical practices: clinical content must
+  not leave the controlled practice environment.
 
-## What ClearDoc is (and is not)
+## The three pillars (from the handover)
 
-| Is | Is not |
-|----|--------|
-| A document-understanding companion with grounded, passage-linked explanations | A lawyer, doctor, or licensed advisor — it informs, it does not advise |
-| A focused workflow: upload → understand → decide | A general chatbot |
-| Privacy-first: documents are sensitive by default | A data-mining play |
+1. **Vollständig** — detect documented services possibly missing from the draft.
+2. **Nachvollziehbar** — every suggestion shows its source, time basis, tariff
+   position, rule version, and financial effect. The practice decides.
+3. **Vertraulich** — the specialized model runs inside the practice's
+   infrastructure; no clinical content to external AI providers, no training of
+   general models on patient data.
 
-## Principles
+## Product logic (non-negotiable)
 
-1. **Grounded or silent** — every claim links back to the source passage; if the
-   document doesn't say it, ClearDoc doesn't claim it.
-2. **Clarity is the product** — reading level, layout, and language are features,
-   not polish.
-3. **Privacy by default** — sensitive documents demand conservative data
-   handling; this is also the core trust differentiator.
-4. **Honest boundaries** — visible "not legal/medical advice" framing, and
-   escalation hints ("this clause is unusual — consider asking a professional").
+- A suggestion exists only when the invoice draft can be cross-checked against
+  a solid source (documentation, practice software, telephony duration, time
+  tracking). **No time source, no suggestion.**
+- Never recommend an undocumented service; never alter treatment or
+  documentation to increase revenue.
+- No automatic booking or sending; human approval is mandatory.
+- Check flat-rate (Pauschale) precedence before per-item logic.
+- Basic vs. supplementary insurance handled by strictly separate rule sets;
+  supplementary insurance is future scope.
+
+## Positioning
+
+Local, specialized AI for verifying Swiss outpatient medical invoices — a
+revenue-integrity and compliance aid for practices, not a billing automat and
+not a general chatbot. External messaging targets all practices; first
+validation targets practices with high invoice volume or heavy manual review
+burden ("Pionierpraxen").
 
 ## Success looks like
 
-- A first-time user uploads a real document and reaches an "aha, now I get it"
-  moment in under two minutes.
-- Users return with the *next* scary document unprompted.
-- Waitlist → activation → retention funnel measurable from launch day one.
+- Pilot practices in shadow mode confirm: high hit rate on genuinely missing
+  documented positions, low false-positive/discard rate, measurable review-time
+  savings, accepted financial effect, and no increase in payer rejections.
+- Practices trust the local processing and the per-suggestion justification
+  enough to move from shadow mode to active use.
