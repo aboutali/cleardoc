@@ -6,16 +6,20 @@ ClearDoc is a locally-run AI verification layer for Swiss TARDOC outpatient medi
 
 **Tagline (German):** Jede erbrachte Leistung. Korrekt verrechnet. Patientendaten bleiben in der Praxis.
 
-*Note: The launch website is in German and targets Swiss medical practices. Product planning documentation remains in English.*
+*Note: The launch website is multilingual (German, English, French, Italian) and targets Swiss medical practices. Product planning documentation remains in English. Live at https://www.cleardoc.ch.*
 
 ## What's in this repository?
 
 This repository holds **two things**:
 
-1. **Launch website** (root directory: `index.html`, `styles.css`, `script.js`, `assets/`)
-   - German-language landing page and interest form
-   - Static HTML, CSS, and JavaScript; no build step
+1. **Launch website** (root directory + language subdirectories)
+   - German landing page at `/index.html` (default)
+   - English at `/en/index.html`, French at `/fr/index.html`, Italian at `/it/index.html`
+   - Shared styles (`styles.css`) and interactivity (`script.js`) at root; language subdirectories reference via `../`
+   - Per-page I18N string config via `window.CLEARDOC_I18N` object
+   - Canonical URLs and hreflang alternates for SEO; language switcher in header
    - Example invoice (`assets/tardoc-rechnung-beispiel-v4.png`) and favicon
+   - Static HTML, CSS, and JavaScript; no build step
    
 2. **Product planning & handover docs** (`docs/` directory)
    - Vision, MVP scope, roadmap (in English, for team coordination)
@@ -27,9 +31,15 @@ This repository holds **two things**:
 ```
 cleardoc/
 ├── README.md                          (you are here)
-├── index.html                         (launch site entry point, German)
-├── styles.css                         (landing page styles)
-├── script.js                          (interactive elements: invoice picker, calculator)
+├── index.html                         (German landing page, default)
+├── styles.css                         (shared styles for all language versions)
+├── script.js                          (shared interactivity; reads window.CLEARDOC_I18N per page)
+├── en/
+│   └── index.html                     (English translation)
+├── fr/
+│   └── index.html                     (French translation)
+├── it/
+│   └── index.html                     (Italian translation)
 ├── assets/
 │   ├── tardoc-rechnung-beispiel-v4.png (example TARDOC invoice)
 │   └── favicon.svg                    (site icon)
@@ -65,13 +75,14 @@ This is a **static site with zero build step**. Deploy the root directory as-is 
 - **Vercel/Netlify:** Connect the repo; no build command needed (leave blank)
 - No environment variables, no database, no CI pipeline required
 
-**Before go-live:** See `ClearDoc_Handover_2026-08-26/HANDOVER.md` section 9. Before publishing, you must:
-1. Replace the Formspree `YOUR_FORM_ID` placeholder in `index.html` with your actual form ID and test the form submission
-2. Add Swiss legal pages: Impressum (legal notice) and Datenschutzerklärung (privacy policy)
+**Before go-live:** See `ClearDoc_Handover_2026-08-26/HANDOVER.md` section 9. Remaining tasks:
+1. Formspree integration is configured (ID: mvkpeykq). Test end-to-end form submission from the live site.
+2. Add Swiss legal pages: Impressum (legal notice) and Datenschutzerklärung (privacy policy) in four languages (German + English/French/Italian translations, or at minimum German with references)
 
 ## Important notes
 
 - **Handover reference:** The validated product scope and decisions are recorded in `ClearDoc_Handover_2026-08-26/HANDOVER.md`. Product planning docs in English are derived from this and remain in the repo for team coordination.
-- **Language split:** Launch site is German (targeting Swiss practices); planning docs are English (for internal team use).
-- **Form integration:** The interest form uses Formspree. Replace `YOUR_FORM_ID` in `index.html` before deploying to production.
+- **Multilingual structure:** German is default (at repo root); other languages live in subdirectories (`/en/`, `/fr/`, `/it/`). Styles and scripts are shared at root; language-specific strings are in per-page `window.CLEARDOC_I18N` objects.
+- **Form integration:** The interest form uses Formspree (ID: mvkpeykq, configured and live). Test from the production site before full launch.
+- **Domain & contact:** Live at https://www.cleardoc.ch; contact info@cleardoc.ch
 - **No credentials:** This is a public repo; store no `.env` or secrets in version control.
