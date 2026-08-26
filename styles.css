@@ -322,3 +322,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Language switcher */
+.site-header { grid-template-columns: 1fr auto auto auto; }
+.lang-switcher { display: flex; align-items: center; gap: 12px; }
+.lang-switcher a { color: var(--warm-dark); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-decoration: none; opacity: 0.55; }
+.lang-switcher a:hover { color: var(--blue); opacity: 1; }
+.lang-switcher a[aria-current="page"] { opacity: 1; color: var(--blue); }
+.site-footer a { color: inherit; }
+@media (max-width: 1020px) {
+  .site-header { grid-template-columns: 1fr auto auto; }
+}
+@media (max-width: 640px) {
+  .site-header { grid-template-columns: 1fr auto; }
+}

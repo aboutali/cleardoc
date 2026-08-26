@@ -7,8 +7,10 @@
 ## Sprint 0 — Launch readiness (this sprint)
 
 - [x] Repo initialized: handover preserved, authoritative German site at root, planning docs reconciled **(site)**
-- [ ] Create Formspree project, replace `YOUR_FORM_ID`, test end-to-end submission **(site)**
-- [ ] Decide domain, brand/legal entity; connect hosting (GitHub Pages / Vercel) **(site)**
+- [x] Formspree configured (`f/mvkpeykq`) — end-to-end test submission from the live site still recommended **(site)**
+- [x] Domain decided: www.cleardoc.ch · contact info@cleardoc.ch **(site)**
+- [x] Site translated: DE (default), EN, FR, IT with hreflang + language switcher **(site)**
+- [ ] Connect hosting (GitHub Pages / Vercel) to www.cleardoc.ch; decide legal entity **(site)**
 - [ ] Add Impressum + Datenschutzerklärung — legally required before go-live; align privacy policy with Formspree processing **(site)**
 - [ ] Tariff + legal review of site claims and sources (BAG reference value, example calculation) **(site)**
 - [ ] Product repo: create skeleton, CI, and eval harness scaffold (separate repo)
