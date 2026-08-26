@@ -1067,3 +1067,12 @@ blank or write `matches expected` on a pass.
 | B17 | | |
 | B18 | | |
 | B19 | | |
+
+---
+
+## Latest run — 2026-08-26
+
+Executed by independent test agents against commit `f6bd8d4` (local server, Chromium headless).
+
+- **Suite A (static): 23/23 pass.** One spec correction during the run: A18's expected mailto count on legal pages was 3, actual site correctly has 5 — spec fixed, site unchanged.
+- **Suite B (browser): 19/19 pass.** Highlights: font floor >= 12px verified on all 8 pages at 1440px and 390px; language switcher round trips DE→EN→FR→IT→DE on landing and legal pages; calculator verified at 0.5% (CHF 5'270), 2.0% (CHF 21'080), 5.0% (CHF 52'700) with localized decimal separators and shared apostrophe grouping; form validity gating works without submission; no console errors, no mobile horizontal scroll.
