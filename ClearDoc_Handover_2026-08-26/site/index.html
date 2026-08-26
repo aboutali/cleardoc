@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ClearDoc prüft TARDOC-Rechnungen mit einer spezialisierten, lokal betriebenen KI. Für alle Arztpraxen.">
+  <title>ClearDoc – TARDOC klar und lokal abrechnen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ClearDoc Startseite">
+      <span class="brand-icon" aria-hidden="true"><span></span></span>
+      <span class="brand-copy"><strong>ClearDoc</strong><small>Lokale KI für Arztpraxen</small></span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#umstellung">TARMED → TARDOC</a>
+      <a href="#rechnung">Rechnungsprüfung</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </nav>
+    <a class="header-cta" href="#pioniere">Pionierpraxis werden</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid section-shell">
+        <div class="hero-copy">
+          <div class="hero-kicker">Für alle Arztpraxen</div>
+          <h1>
+            <span>TARDOC.</span>
+            <span>Klarer.</span>
+            <span>Abrechnen.</span>
+          </h1>
+          <p>ClearDoc prüft Ihre Rechnungen mit einer speziell für die Schweizer Tariflogik trainierten KI. Lokal auf Ihrem Rechner. Nachvollziehbar bis auf die einzelne Position.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pioniere">Pionierpraxis werden</a>
+            <a class="button button-light" href="#rechnung">So prüft ClearDoc</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="promise-bar" aria-label="ClearDoc Datenschutzversprechen">
+      <div class="promise-track">
+        <span>Für TARDOC trainiert</span><i aria-hidden="true"></i>
+        <span>Lokal ausgeführt</span><i aria-hidden="true"></i>
+        <span>Patientendaten bleiben vor Ort</span><i aria-hidden="true"></i>
+        <span>Schweizer Datenschutz by Design</span>
+      </div>
+    </section>
+
+    <section class="transition-compact" id="umstellung">
+      <div class="section-shell transition-compact-row">
+        <strong>TARMED → TARDOC</strong>
+        <p>Seit 1. Januar 2026 gelten neue Tarifziffern, Limitationen und ambulante Pauschalen. ClearDoc übersetzt diese Logik bei jeder lokalen Rechnungsprüfung in konkrete Hinweise.</p>
+      </div>
+    </section>
+
+    <section class="value-section section-block" id="value">
+      <div class="section-shell">
+        <div class="section-label">Value Proposition</div>
+        <div class="value-heading">
+          <h2>Jede erbrachte Leistung.<br>Korrekt verrechnet.</h2>
+          <p>ClearDoc verbindet die klinische Dokumentation mit dem Rechnungsentwurf und der aktuell gültigen Tariflogik. Die Praxis entscheidet. Die KI begründet.</p>
+        </div>
+        <div class="value-grid">
+          <article>
+            <span class="value-index">01</span>
+            <h3>Vollständig</h3>
+            <p>Erkennt dokumentierte Leistungen, die im Rechnungsentwurf fehlen könnten.</p>
+            <strong>Kein kreatives Codieren. Keine erfundenen Leistungen.</strong>
+          </article>
+          <article>
+            <span class="value-index">02</span>
+            <h3>Nachvollziehbar</h3>
+            <p>Zeigt zu jedem Hinweis die Dokumentationsstelle, Tarifziffer und angewandte Regel.</p>
+            <strong>Die letzte Entscheidung bleibt immer beim Menschen.</strong>
+          </article>
+          <article>
+            <span class="value-index">03</span>
+            <h3>Vertraulich</h3>
+            <p>Die spezialisierte KI läuft lokal in der kontrollierten Umgebung Ihrer Praxis.</p>
+            <strong>Patientendaten verlassen den Praxisrechner nicht.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="invoice-section section-block" id="rechnung">
+      <div class="section-shell">
+        <div class="invoice-intro">
+          <div>
+            <div class="section-label section-label-light">Was ClearDoc macht</div>
+            <h2>Jede Rechnung.<br>Vor dem Versand geprüft.</h2>
+          </div>
+          <div>
+            <p>ClearDoc gleicht Rechnungsentwurf, dokumentierte Leistungen und – wo relevant – verlässliche Zeitdaten aus Praxissoftware, Telefonie oder Zeiterfassung lokal mit TARDOC ab. Ohne Beleg kein Vorschlag.</p>
+            <div class="invoice-tabs" role="group" aria-label="Rechnungsansicht wählen">
+              <button type="button" data-invoice-state="draft" aria-pressed="false">1 · Rechnungsentwurf</button>
+              <button type="button" data-invoice-state="checked" aria-pressed="true" class="active">2 · ClearDoc-Vorschlag</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="invoice-demo-grid">
+          <figure class="official-invoice-viewer" data-invoice-viewer data-state="checked" aria-live="polite">
+            <div class="invoice-page">
+              <img src="assets/tardoc-rechnung-beispiel-v4.png" alt="Beispiel eines TARDOC-Rückforderungsbelegs mit Tarif 007 und einem Rechnungsbetrag von CHF 286.40">
+              <div class="invoice-row-highlight" aria-hidden="true"><span>ClearDoc-Hinweis</span></div>
+              <div class="invoice-row-mask" aria-hidden="true"><span>Im ursprünglichen Rechnungsentwurf nicht enthalten</span></div>
+            </div>
+            <figcaption>Beispielrechnung · TARDOC Release 5.0</figcaption>
+          </figure>
+
+          <aside class="invoice-analysis" aria-label="ClearDoc-Analyse der Rechnung">
+            <div class="analysis-eyebrow">Beispiel · Telefonische Konsultation</div>
+            <h3>Woher kommt der Vorschlag?</h3>
+            <span class="analysis-status" id="analysis-status">Zeitquelle und Dokumentation abgeglichen</span>
+            <div class="evidence-list">
+              <div><small>Zeiterfassung / Telefonie</small><strong>08:41–08:49 · 8 Min.</strong></div>
+              <div><small>Rechnungsentwurf</small><strong>Erste 5 Min. verrechnet</strong></div>
+              <div><small>Differenz</small><strong>3 dokumentierte Min. fehlen</strong></div>
+            </div>
+            <div class="suggestion-result">
+              <small>ClearDoc schlägt zur Prüfung vor</small>
+              <strong id="found-amount">AA.10.0020 × 3 · + CHF 29.23</strong>
+            </div>
+            <dl>
+              <div><dt>Rechnungsentwurf</dt><dd>CHF 257.17</dd></div>
+              <div><dt id="total-label">Nach ärztlicher Freigabe</dt><dd id="invoice-total">CHF 286.40</dd></div>
+            </dl>
+            <div class="analysis-proof"><strong>Keine Zeitquelle, kein Vorschlag.</strong><span>ClearDoc braucht eine Schnittstelle zur Praxissoftware, Telefonie oder Zeiterfassung und die passende Dokumentation. Es bucht nichts automatisch.</span></div>
+          </aside>
+        </div>
+
+        <div class="annual-scenario">
+          <div class="annual-result">
+            <div class="analysis-eyebrow">Jahrespotenzial · Beispielpraxis</div>
+            <strong id="annual-extra">≈ CHF 21'080</strong>
+            <p>möglicherweise zusätzlich verrechenbares Volumen pro Jahr.</p>
+            <label for="uplift-slider"><span>Angenommener, im Entwurf übersehener Anteil <output id="uplift-output" for="uplift-slider">2,0%</output></span></label>
+            <input id="uplift-slider" type="range" min="0.5" max="5" step="0.5" value="2" aria-label="Angenommener übersehener Rechnungsanteil in Prozent">
+          </div>
+          <div class="annual-formula" aria-label="Annahmen der Jahreshochrechnung">
+            <div><small>Rechnungen pro Jahr</small><strong>≈ 6'800</strong><span>Beispielannahme</span></div>
+            <i aria-hidden="true">×</i>
+            <div><small>Ø Rechnungsbetrag</small><strong>CHF 155</strong><span>BAG-Referenzwert</span></div>
+            <i aria-hidden="true">×</i>
+            <div><small>Im Entwurf übersehen</small><strong id="uplift-formula">2,0%</strong><span>Mit dem Regler anpassbar</span></div>
+          </div>
+        </div>
+        <p class="invoice-note">Beispielrechnung, keine Garantie. 6'800 Rechnungen pro Jahr sind eine gerundete Annahme; CHF 155 basiert auf einem <a href="https://www.bag.admin.ch/dam/de/sd-web/fSTnQwKB6RVF/faktenblatt-2025-kostenentwicklung-aertzlich-ambulant.pdf" target="_blank" rel="noreferrer">BAG-Referenzwert</a>. Der Prozentsatz ist frei anpassbar. Rechnungsstruktur nach der öffentlichen <a href="https://www.aerztekasse.ch/patienteninfo/tardoc-rechnung/" target="_blank" rel="noreferrer">Ärztekasse-Lesehilfe</a>.</p>
+      </div>
+    </section>
+
+    <section class="privacy-section section-block" id="datenschutz">
+      <div class="section-shell privacy-grid">
+        <div class="privacy-copy">
+          <div class="section-label">Lokale künstliche Intelligenz</div>
+          <h2>Für TARDOC<br>trainiert.<br>Vor Ort<br>ausgeführt.</h2>
+          <p>Das spezialisierte Sprachmodell läuft in der Infrastruktur Ihrer Praxis. Dokumentation und Rechnungsdaten werden lokal analysiert, lokal protokolliert und lokal freigegeben.</p>
+        </div>
+
+        <div class="local-model" aria-label="Datenfluss der lokalen ClearDoc-Installation">
+          <div class="machine-top">
+            <span>ClearDoc Local</span>
+            <i>Aktiv</i>
+          </div>
+          <div class="flow-item">
+            <span class="flow-number">01</span>
+            <div><strong>Praxissoftware</strong><small>Dokumentation + Rechnungsentwurf</small></div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">↓</div>
+          <div class="flow-item active-flow">
+            <span class="flow-number">02</span>
+            <div><strong>Lokale ClearDoc-KI</strong><small>TARDOC-Prüfung ohne Cloudübertragung</small></div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">↓</div>
+          <div class="flow-item">
+            <span class="flow-number">03</span>
+            <div><strong>Menschliche Freigabe</strong><small>Übernehmen, verwerfen oder begründen</small></div>
+          </div>
+          <div class="no-cloud"><span aria-hidden="true">×</span><strong>Keine Patientendaten in einer externen KI-Cloud</strong></div>
+        </div>
+      </div>
+
+      <div class="section-shell privacy-pillars">
+        <div><span>01</span><strong>Daten bleiben vor Ort</strong><p>Keine Übermittlung klinischer Inhalte an externe Modellanbieter.</p></div>
+        <div><span>02</span><strong>Kein Weitertraining</strong><p>Patientendaten werden nicht zum Training allgemeiner Modelle verwendet.</p></div>
+        <div><span>03</span><strong>Schweizer Datenschutz</strong><p>Für DSG, Arztgeheimnis und kontrollierbare Zugriffsrechte konzipiert.</p></div>
+      </div>
+    </section>
+
+    <section class="pioneer-section section-block" id="pioniere">
+      <div class="section-shell pioneer-grid">
+        <div class="pioneer-copy">
+          <div class="section-label">Pionierpraxen</div>
+          <h2>ClearDoc in Ihrer Praxis testen.</h2>
+          <p>Wir suchen erste Arztpraxen, die ClearDoc im sicheren Schattenbetrieb mit echten Arbeitsabläufen validieren möchten.</p>
+          <ul>
+            <li>Keine automatische Änderung von Rechnungen</li>
+            <li>Keine Übermittlung von Patientendaten</li>
+            <li>Messbare Hinweise zu Vollständigkeit und Prüfzeit</li>
+          </ul>
+        </div>
+
+        <form class="pioneer-form" id="pilot-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Neue ClearDoc Pionierpraxis-Anfrage">
+          <input type="hidden" name="_language" value="de">
+          <div class="form-heading">
+            <span>Unverbindlich</span>
+            <h3>Pionierpraxis werden</h3>
+          </div>
+          <div class="field-row">
+            <label>Vorname<input type="text" name="firstName" autocomplete="given-name" required></label>
+            <label>Nachname<input type="text" name="lastName" autocomplete="family-name" required></label>
+          </div>
+          <label>Geschäftliche E-Mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Fachgebiet
+            <select name="specialty" required>
+              <option value="">Bitte wählen</option>
+              <option>Allgemeine Innere Medizin</option>
+              <option>Kardiologie</option>
+              <option>Dermatologie</option>
+              <option>HNO</option>
+              <option>Ophthalmologie</option>
+              <option>Orthopädie</option>
+              <option>Anderes Fachgebiet</option>
+            </select>
+          </label>
+          <label>Wo besteht heute die grösste Unsicherheit?
+            <select name="challenge" required>
+              <option value="">Bitte wählen</option>
+              <option>Umstellung von TARMED auf TARDOC</option>
+              <option>Erbrachte Leistungen werden übersehen</option>
+              <option>Regeln und Limitationen sind unklar</option>
+              <option>Rechnungen werden zurückgewiesen</option>
+              <option>Die manuelle Prüfung kostet zu viel Zeit</option>
+            </select>
+          </label>
+          <label class="checkbox-label"><input type="checkbox" name="consent" value="zugestimmt" required><span>Ich darf zum ClearDoc-Pionierprogramm kontaktiert werden.</span></label>
+          <button class="button button-primary button-full" type="submit">Interesse anmelden</button>
+          <p class="form-note">Die Übermittlung erfolgt verschlüsselt über Formspree. Bitte keine Patienten- oder Gesundheitsdaten eingeben.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="fact-strip">
+      <div class="section-shell">
+        <p><strong>Faktenbasis:</strong> TARDOC und ambulante Pauschalen gelten seit 1. Januar 2026. Für die Rechnungsstellung ist der XML-Standard 5.0 erforderlich.</p>
+        <div><a href="https://www.bag.admin.ch/de/tardoc-und-ambulante-pauschalen" target="_blank" rel="noreferrer">BAG</a><a href="https://tarifeambulant.fmh.ch/hilfe-services/neues-rechnungsformular-50.cfm" target="_blank" rel="noreferrer">FMH Rechnungsformat 5.0</a><a href="https://www.aerztekasse.ch/patienteninfo/tardoc-rechnung/" target="_blank" rel="noreferrer">Ärztekasse Rechnung</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell">
+      <a class="brand footer-brand" href="#top"><span class="brand-icon" aria-hidden="true"><span></span></span><span class="brand-copy"><strong>ClearDoc</strong><small>Lokale KI für Arztpraxen</small></span></a>
+      <p>Unabhängiger Arbeitsentwurf. Keine Verbindung zu OAAT, FMH oder Versicherern.</p>
+      <p>© <span id="year"></span> ClearDoc</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
