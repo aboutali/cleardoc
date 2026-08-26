@@ -302,8 +302,9 @@ grep -c 'mailto:info@cleardoc.ch' index.html legal.html en/index.html en/legal.h
 
 **Expected result:** `index.html`, `en/index.html`, `fr/index.html`,
 `it/index.html` each = `1`; `legal.html`, `en/legal.html`,
-`fr/legal.html`, `it/legal.html` each = `3` (address block, datenschutz
-contact block, footer).
+`fr/legal.html`, `it/legal.html` each = `5` (impressum address block,
+datenschutz address block, §4 consent-withdrawal contact, §8 rights
+contact, footer).
 
 ### A19 — Footer links to that language's own legal.html anchors
 
