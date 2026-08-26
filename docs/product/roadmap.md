@@ -10,7 +10,8 @@
 - [x] Formspree configured (`f/mvkpeykq`) — end-to-end test submission from the live site still recommended **(site)**
 - [x] Domain decided: www.cleardoc.ch · contact info@cleardoc.ch **(site)**
 - [x] Site translated: DE (default), EN, FR, IT with hreflang + language switcher **(site)**
-- [x] Hosting: GitHub Pages from `main`, CNAME www.cleardoc.ch — DNS record + Pages activation pending in registrar/GitHub settings **(site)**
+- [x] Hosting: GitHub Pages from `main`; internal files excluded from the published site via `_config.yml` **(site)**
+- [ ] Connect custom domain www.cleardoc.ch — ON HOLD per founder; re-add `CNAME` file + DNS records when ready **(site)**
 - [x] Impressum + Datenschutzerklärung published in DE/EN/FR/IT (ANB Ventures, PO Box, Zurich) — professional legal review still recommended **(site)**
 - [ ] Tariff + legal review of site claims and sources (BAG reference value, example calculation) **(site)**
 - [ ] Product repo: create skeleton, CI, and eval harness scaffold (separate repo)

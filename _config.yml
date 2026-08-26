@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) config: publish the site only.
+# Internal planning files stay in the repo but are NOT served publicly.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - docs/
+  - ClearDoc_Handover_2026-08-26/
+  - .gitignore

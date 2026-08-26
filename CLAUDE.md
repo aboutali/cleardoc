@@ -27,5 +27,9 @@ Standing instructions from the founder — valid at all times:
 - Site copy must never promise beyond the MVP scope in `docs/product/mvp.md`,
   and model calculations stay labeled as examples, never guarantees.
 - Planning docs are English; site copy is DE/EN/FR/IT.
-- Launch facts: domain https://www.cleardoc.ch · contact info@cleardoc.ch ·
+- Launch facts: domain https://www.cleardoc.ch (connection ON HOLD — do not add
+  a `CNAME` file until the founder says so) · contact info@cleardoc.ch ·
   Formspree endpoint https://formspree.io/f/mvkpeykq.
+- Internal files (README, CLAUDE.md, docs/, handover folder) are excluded from
+  the published site via `_config.yml` — keep that list in sync when adding
+  non-site files.

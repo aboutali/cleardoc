@@ -56,17 +56,6 @@ cleardoc/
     └── HANDOVER.md                    (original handover documentation, preserved as record)
 ```
 
-## Local preview
-
-Run a local HTTP server to preview the site:
-
-```bash
-python3 -m http.server 8000
-# Then visit http://localhost:8000
-```
-
-(Direct file:// access may break interactive elements like the calculator and form.)
-
 ## Deployment
 
 This is a **static site with zero build step**. Deploy the root directory as-is to any static host:
@@ -75,14 +64,18 @@ This is a **static site with zero build step**. Deploy the root directory as-is 
 - **Vercel/Netlify:** Connect the repo; no build command needed (leave blank)
 - No environment variables, no database, no CI pipeline required
 
-**Before go-live:** See `ClearDoc_Handover_2026-08-26/HANDOVER.md` section 9. Remaining tasks:
-1. Formspree integration is configured (ID: mvkpeykq). Test end-to-end form submission from the live site.
-2. Add Swiss legal pages: Impressum (legal notice) and Datenschutzerklärung (privacy policy) in four languages (German + English/French/Italian translations, or at minimum German with references)
+Internal files (`README.md`, `CLAUDE.md`, `docs/`, the handover folder) are excluded
+from the published site via `_config.yml`.
+
+**Before go-live:**
+1. Formspree is configured (ID: mvkpeykq) — test end-to-end form submission from the live site.
+2. Legal pages (Impressum + Datenschutzerklärung) exist in all four languages — professional legal review recommended.
+3. Custom domain www.cleardoc.ch is **on hold**: no `CNAME` file yet; add it back and set DNS when ready to connect.
 
 ## Important notes
 
 - **Handover reference:** The validated product scope and decisions are recorded in `ClearDoc_Handover_2026-08-26/HANDOVER.md`. Product planning docs in English are derived from this and remain in the repo for team coordination.
 - **Multilingual structure:** German is default (at repo root); other languages live in subdirectories (`/en/`, `/fr/`, `/it/`). Styles and scripts are shared at root; language-specific strings are in per-page `window.CLEARDOC_I18N` objects.
 - **Form integration:** The interest form uses Formspree (ID: mvkpeykq, configured and live). Test from the production site before full launch.
-- **Domain & contact:** Live at https://www.cleardoc.ch; contact info@cleardoc.ch
+- **Domain & contact:** Target domain https://www.cleardoc.ch (connection on hold); contact info@cleardoc.ch
 - **No credentials:** This is a public repo; store no `.env` or secrets in version control.
